@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Posts tagged with hiatus: JolHarg: Software and Technology Blog</title><id>https://blog.jolharg.com/atom.xml</id><updated>2015-04-04 21:52:00 UTC</updated><link href="https://blog.jolharg.com/tag/hiatus"/><entry><id>project-chaplin-video-sharing-beta</id><title type="text">Project Chaplin Video Sharing Beta Released</title><updated>2015-04-04 21:52:00 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;Announcing the release of Project Chaplin.&lt;/p&gt;
+&lt;p&gt;Project Chaplin is an open source web-based video sharing client, which includes compatibility with HTML5 and YouTube support.&lt;/p&gt;
+&lt;p&gt;After being in alpha for and being sadly in hiatus for 7 months, I'm pleased to announce the release of the first beta.&lt;/p&gt;
+&lt;p&gt;Pre-alpha and alpha releases have had rave reviews and we have had a test site (projectchaplin.com) up for a time, but sadly it was not sustainable at the time, but I may put it back up soon enough.&lt;/p&gt;
+&lt;p&gt;Features include:&lt;/p&gt;
+&lt;p&gt;A free software, open source licence as standard No intrusive adverts Import videos from popular video sources No restrictions on content by country, IP or government Video downloading as standard HTML5 WebM as standard Live streaming (pluginless) Federation through multiple servers Live video effects including brightness and contrast Easter eggs?&lt;/p&gt;
+&lt;p&gt;In the pipeline are:&lt;/p&gt;
+&lt;p&gt;REST APIs Blocking on public demand Federated APIs Public tagging of videos Channel subscriptions Individual profiles Audio downloading&lt;/p&gt;
+&lt;p&gt;Chaplin can be downloaded at &lt;a href="https://github.com/dandart/projectchaplin"&gt;https://github.com/dandart/projectchaplin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please let me know what you think and if you have any suggestions or can help please let me know!&lt;/p&gt;
+&lt;p&gt;Credits:&lt;/p&gt;
+&lt;p&gt;Majority of code: &lt;a href="https://github.com/dandart/"&gt;Dan Dart&lt;/a&gt; Majority of design: &lt;a href="https://github.com/nabilfreeman"&gt;Nabil Freeman&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Till next time!&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2015/04/project-chaplin-video-sharing-beta"/></entry></feed>

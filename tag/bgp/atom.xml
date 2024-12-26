@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Posts tagged with bgp: JolHarg: Software and Technology Blog</title><id>https://blog.jolharg.com/atom.xml</id><updated>2021-10-08 16:37:31 UTC</updated><link href="https://blog.jolharg.com/tag/bgp"/><entry><id>facebook-being-down-killed-adguard</id><title type="text">Facebook being down killed AdGuard</title><updated>2021-10-08 16:37:31 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;Tbh Facebook being down the other day did have one knock-on effect for me who doesn’t use it.&lt;/p&gt;
+&lt;p&gt;Adguard DNS got quite a pummeling from folks trying to access Facebook and their entire DNS effectively got DDoSed, leaving nothing getting resolved for a good while.&lt;/p&gt;
+&lt;p&gt;Meanwhile I over here killed my own internet by disabling DNS on my router for days thinking it would revert to default. Was very confusing as I had adguard hardcoded on my PC as well, but not my phone.&lt;/p&gt;
+&lt;p&gt;My week went like this:&lt;/p&gt;
+&lt;p&gt;My phone: "No internet".&lt;/p&gt;
+&lt;p&gt;Me on my PC: "Huh? But it’s working! See?"&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2021/10/facebook-being-down-killed-adguard"/></entry></feed>

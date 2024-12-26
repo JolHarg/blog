@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Posts tagged with broadcasting: JolHarg: Software and Technology Blog</title><id>https://blog.jolharg.com/atom.xml</id><updated>2011-10-01 21:58:00 UTC</updated><link href="https://blog.jolharg.com/tag/broadcasting"/><entry><id>new-project-view-and-share-media-online</id><title type="text">New Project: View and Share Media Online</title><updated>2011-10-01 21:58:00 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;I'm announcing a new media viewing and sharing framework called ShareAV.&lt;/p&gt;
+&lt;p&gt;The features will include support for:&lt;/p&gt;
+&lt;p&gt;Uploading and downloading of media, including audio and video Viewing media privately Sharing media publically or to a group&lt;/p&gt;
+&lt;p&gt;Adding to your own library for easier access Re-sharing&lt;/p&gt;
+&lt;p&gt;Viewing media from other streams or sources: Last.fm Jamendo RSS feeds eg podcasts Radio Streams e.g. icecast Visualisations&lt;/p&gt;
+&lt;p&gt;User "profile" pages Shared Media Favourite media&lt;/p&gt;
+&lt;p&gt;Creating and removal of users with groups such as: Owner Admin Moderator&lt;/p&gt;
+&lt;p&gt;Creating and removing of friends Create and removing groups of friends OAuth/OpenID/Facebook/Google authentication (no one wants to register for things anymore!) REST interface for external API goodness Live updates for comments for groups Live updates for who's viewing media Live broadcasting and recording using JS Audio API Live notifications of when broadcasting or recording starts Live chat - IRC integrated - allow anonymous&lt;/p&gt;
+&lt;p&gt;Mobile support via PhoneGap&lt;/p&gt;
+&lt;p&gt;The frontend will be programmed in Static HTML + JS - suitable for non-PHP devices The backend in PHP, ZF and a NoSQL db&lt;/p&gt;
+&lt;p&gt;The project is being tracked on Github here: &lt;a href="https://github.com/dandart/ShareAV" class="uri"&gt;https://github.com/dandart/ShareAV&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For anyone who wishes to have input / contribute / help / be awesome can do so in the following ways:&lt;/p&gt;
+&lt;p&gt;By adding a comment to this blog By adding and talking to me on G+ (gplus.to/dandart) by emailing me on &lt;a href="mailto:shareav@dandart.co.uk" class="email"&gt;shareav@dandart.co.uk&lt;/a&gt;&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2011/10/new-project-view-and-share-media-online"/></entry></feed>

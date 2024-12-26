@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Posts tagged with library: JolHarg: Software and Technology Blog</title><id>https://blog.jolharg.com/atom.xml</id><updated>2018-08-07 11:30:00 UTC</updated><link href="https://blog.jolharg.com/tag/library"/><entry><id>spotify-and-netflix-on-chromium-with</id><title type="text">Spotify (and Netflix) on Chromium, with help from Steam, without root!</title><updated>2018-08-07 11:30:00 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;Users of Chromium will have trouble listening to Spotify, even if "protected content" (another word for "we own you") is on. This is because there are missing Widevine libraries.&lt;/p&gt;
+&lt;p&gt;The usual way to find them is to copy them from your Chrome installation, sometimes at /opt/google/chrome, sometimes at /usr/share/chrome, but these can also be acquired from Steam installations (since Steam embeds Chrome).&lt;/p&gt;
+&lt;p&gt;If you're running Steam, copy both&lt;/p&gt;
+&lt;p&gt; ~/.steam/steam/config/widevine/libwidevinecdm.so&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;~/.steam/steam/config/widevine/libwidevinecdmadapter.so&lt;/p&gt;
+&lt;p&gt;to ~/.config/chromium&lt;/p&gt;
+&lt;p&gt;then restart Chromium.&lt;/p&gt;
+&lt;p&gt;If you use Netflix, use a user agent extension to set your user agent to Chrome, so Netflix won't automatically assume that you can't use it.&lt;/p&gt;
+&lt;p&gt;Hope that helps anyone coming across this issue.&lt;/p&gt;
+&lt;p&gt;Till next time.&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2018/08/spotify-and-netflix-on-chromium-with"/></entry></feed>

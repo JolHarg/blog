@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Posts tagged with pi: JolHarg: Software and Technology Blog</title><id>https://blog.jolharg.com/atom.xml</id><updated>2022-12-20 19:16:15 UTC</updated><link href="https://blog.jolharg.com/tag/pi"/><entry><id>raspberry-pi-pico-w-nixos</id><title type="text">Raspberry Pi Pico (W) on NixOS</title><updated>2022-12-20 19:16:15 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;If you're following &lt;a href="https://github.com/danwdart"&gt;my GitHub&lt;/a&gt;, you'll know I've got a new testing project for the Raspberry Pi Pico (W).&lt;/p&gt;
+&lt;p&gt;Here's the &lt;code&gt;shell.nix&lt;/code&gt; file again:&lt;/p&gt;
+&lt;div class="sourceCode" id="cb1"&gt;&lt;pre class="sourceCode nix"&gt;&lt;code class="sourceCode nix"&gt;&lt;span id="cb1-1"&gt;&lt;a href="#cb1-1" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="kw"&gt;with&lt;/span&gt; &lt;span class="bu"&gt;import&lt;/span&gt; &amp;lt;nixpkgs&amp;gt; &lt;span class="op"&gt;{};&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-2"&gt;&lt;a href="#cb1-2" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;runCommand &lt;span class="st"&gt;&amp;quot;pico&amp;quot;&lt;/span&gt; &lt;span class="op"&gt;{&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-3"&gt;&lt;a href="#cb1-3" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;    &lt;span class="va"&gt;shellHook&lt;/span&gt; &lt;span class="op"&gt;=&lt;/span&gt; &lt;span class="st"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-4"&gt;&lt;a href="#cb1-4" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="st"&gt;      export PICO_SDK_FETCH_FROM_GIT=on&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-5"&gt;&lt;a href="#cb1-5" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="st"&gt;      export PICO_EXTRAS_FETCH_FROM_GIT=on&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-6"&gt;&lt;a href="#cb1-6" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="st"&gt;      export BOARD=pico-w&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-7"&gt;&lt;a href="#cb1-7" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="st"&gt;      export PICO_BOARD=pico_w&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-8"&gt;&lt;a href="#cb1-8" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="st"&gt;    &amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="op"&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-9"&gt;&lt;a href="#cb1-9" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;    &lt;span class="va"&gt;buildInputs&lt;/span&gt; &lt;span class="op"&gt;=&lt;/span&gt; &lt;span class="op"&gt;[&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-10"&gt;&lt;a href="#cb1-10" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      cmake&lt;/span&gt;
+&lt;span id="cb1-11"&gt;&lt;a href="#cb1-11" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      gcc&lt;/span&gt;
+&lt;span id="cb1-12"&gt;&lt;a href="#cb1-12" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      gcc-arm-embedded&lt;span class="dv"&gt;-10&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-13"&gt;&lt;a href="#cb1-13" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      gnumake&lt;/span&gt;
+&lt;span id="cb1-14"&gt;&lt;a href="#cb1-14" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      pico-sdk&lt;/span&gt;
+&lt;span id="cb1-15"&gt;&lt;a href="#cb1-15" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      picotool&lt;/span&gt;
+&lt;span id="cb1-16"&gt;&lt;a href="#cb1-16" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      python311&lt;/span&gt;
+&lt;span id="cb1-17"&gt;&lt;a href="#cb1-17" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;    &lt;span class="op"&gt;];&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb1-18"&gt;&lt;a href="#cb1-18" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="op"&gt;}&lt;/span&gt; &lt;span class="st"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Putting this in the root of a directory allows one to compile Pico (W) projects, avoiding polluting the global environment.&lt;/p&gt;
+&lt;p&gt;Huzzah!&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2022/12/raspberry-pi-pico-w-nixos"/></entry></feed>

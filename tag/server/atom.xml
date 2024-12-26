@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Posts tagged with server: JolHarg: Software and Technology Blog</title><id>https://blog.jolharg.com/atom.xml</id><updated>2018-07-27 00:46:00 UTC</updated><link href="https://blog.jolharg.com/tag/server"/><entry><id>retro-dial-up-network-fun</id><title type="text">Retro dial-up network fun</title><updated>2018-07-27 00:46:00 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;I remember those days when your computer hissed and made strange noises in order to connect to the Internet. Today, most of us look back at those days in disdain. But for some, we want to repeat the same kind of experiences that we used to, just for the pure nostalgia of it. Some of the most remembered operating systems can take us back to those days.&lt;/p&gt;
+&lt;p&gt;Windows for Workgroups 3.11 is remembered for its Terminal application and ability to use a multitude of networking technologies to connect to networks back in the day.&lt;/p&gt;
+&lt;p&gt;DOS also had limited support for networks - but this required third party software, unless one would talk directly to "COM1" as it would name the serial device.&lt;/p&gt;
+&lt;p&gt;Windows 98, although it has proper TCP/IP and Ethernet card support built in and there's therefore no need to use serial for internet when virtualising, for the most part it is remembered for its dial-up connections, since when we were using it, no one had broadband yet. But one of the best things about Windows 98 and serial is HyperTerminal! One can now connect to SynchroNet or other telnet services from Windows 98, just using HyperTerminal like dialling a phone, and possibly other things even with TLS, using socat. If you have a Windows 98 computer without ethernet, and a serial port between your host and Windows 98 computer, you can also connect to the Internet via this setup, by modifying the setup instructions to use a real serial port.&lt;/p&gt;
+&lt;p&gt;I'm not including instructions to emulate a "Lucent" win-modem because as far as I can see, qemu doesn't support these.&lt;/p&gt;
+&lt;p&gt;Although this isn't needed for dial up internet connection sharing, one can emulate a terminal with a SLIP interface too.&lt;/p&gt;
+&lt;p&gt;I'm going to explain how to pretend to be your own ISP, to old versions of Windows, and make HyperTerminal available for telnet fun, all via a virtual serial port.&lt;/p&gt;
+&lt;p&gt;To set this serial emulation up, I tried doing this through the VICE RS232 mode of tcpser, but it ultimately came up short. My VMs could use it just fine for telnetting places, but wouldn't go through pppd properly if I just socatted from its port to a pty, and made pppd listen on that pty. I think there was a protocol problem somewhere there, plus pppd kept hanging when I tried to make it listen on a TCP port - this is probably because it was trying to connect - but it is OK with a serial port. But this won't work with any old pty, it has to "look" like a serial port as well, and you can't just redirect physical serial ports using socat as if they were a file either.&lt;/p&gt;
+&lt;p&gt;The secret ingredient is to install a virtual serial port - its module is called tty0tty and it can be found here: &lt;a href="https://github.com/freemed/tty0tty" class="uri"&gt;https://github.com/freemed/tty0tty&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After installation (check the page for up to date instructions) you have access to 4 virtual serial port loops:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/dev/tnt0 &amp;lt;=&amp;gt; /dev/tnt1
+/dev/tnt2 &amp;lt;=&amp;gt; /dev/tnt3
+/dev/tnt4 &amp;lt;=&amp;gt; /dev/tnt5
+/dev/tnt6 &amp;lt;=&amp;gt; /dev/tnt7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For use as a normal user, these should be chmod'd to 666:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo chmod 666 /dev/tnt\*&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Anything sent to either end will be echoed on the other end, and this will act like a proper serial port, plugged in one end and the other end. For more information on this, see their GitHub repo.&lt;/p&gt;
+&lt;p&gt;Once this is set up, we can start the virtual machine. First, run qemu using the virtual serial line:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;qemu-system-i386 win98.img -serial /dev/tnt0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Connect the other end to tcpser, which will emulate the phone line and allow you to dial a TCP connection.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tcpser -tsSiI -i &amp;#39;s0=1&amp;amp;k3&amp;#39; -s 57600 -S 57600 -l5 -d /dev/tnt1 -n 1=127.0.0.1:2323 -n 2=synchro.net -n 3=
+localhost:23 -n 08450880101=localhost:2323 -n 08458457444=127.0.0.1:2323 -n &amp;quot;0845 845 7444&amp;quot;=127.0.0.1:2323 -n 0018002169575=127.
+0.0.1:2323 -n 0018005433279=127.0.0.1:2323 -n 08450801000=127.0.0.1:2323&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Explanation: Log everything. Set pickup to 1 ring. Set speed to 56k. Use the other end of the first serial line. Add a few example phone numbers (-n number=IP:port), (these I've used for ISP detection in Windows 98).&lt;/p&gt;
+&lt;p&gt;Listen to that TCP connection with socat and redirect it to a second virtual serial line loopback. I don't want it to die so I'll put it in a while true.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while true; do socat -s -d -d tcp-listen:2323 /dev/tnt2; done&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In order to pretend to be our own ISP, we need to run pppd on the other end of that serial line. I couldn't use IP directly, this needs a serial line, and tcpser couldn't use a second interface, so we need to use socat. The IPs I'm using are within my current network. The rest of the settings are to disable authentication (for now, as I couldn't get it to work, which needs root), not fork the process so we can debug, not die if there's no call, show the debug logs, not communicate via serial (just IP), allow the connection to be seen by the LAN, adjust the forwarding parameters of the kernel appropriately and set a default DNS server of Quad9.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pppd /dev/tnt3 57600 192.168.1.100:192.168.1.101 asyncmap 0 netmask 255.255.255.0 noauth silent nodetach passive persist debug local proxyarp ktune
+ ms-dns 9.9.9.9&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you'd like to define your own DNS mappings from your /etc/hosts, such as pretending to be the server for updates and ISP information (if you host a web server locally), add the appropriate lines to your /etc/hosts like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;192.168.1.100   ispreferral.microsoft.com www.update.microsoft.com v4.windowsupdate.microsoft.com windowsupdate.microsoft.com ww
+w.msn.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and change &lt;code&gt;ms-dns 9.9.9.9&lt;/code&gt; to &lt;code&gt;ms-dns 192.168.1.100&lt;/code&gt; in the &lt;code&gt;pppd&lt;/code&gt; command, then run dnsmasq:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo dnsmasq -zdippp0 -2ppp0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The -z specifies only binding to ppp0 (to not interfere with other services running on port 53/udp, such as systemd-resolved), -d to not daemonise, -i ppp0 to specify the interface and -2 ppp0 to specify only DNS, not DHCP.&lt;/p&gt;
+&lt;p&gt;In any case, do the usual NAT stuff:&lt;/p&gt;
+&lt;p&gt;Allow IP forwarding...&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo 1 | sudo tee  /proc/sys/net/ipv4/ip\_forward&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And allow forwarding and masquerading in the firewall (replace wlp7s0 with your main interface)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo iptables -t nat -A POSTROUTING -o wlp7s0 -j MASQUERADE
+
+sudo iptables -A FORWARD -i wlp7s0 -o ppp0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+sudo iptables -A FORWARD -i ppp0 -o wlp7s0 -j ACCEPT&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Hooray! Connecting to phone number 1 will give us a "dial up" connection through our virtual serial line! 2 will give us a line to synchro.net for use in the Terminal or HyperTerminal application, 3 will telnet to our local system if we need that for any reason and 08450880101 is the default Windows 98 "find my ISPs" service, which I've also redirected to our "ISP" connection for good measure.&lt;/p&gt;
+&lt;p&gt;Coming next time: Can we emulate update servers and ISP information servers? Given Windows 98 only supports 128-bit SSL / TLS 1.0, I think it's time to break SSL.&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2018/07/retro-dial-up-network-fun"/></entry></feed>
