@@ -3,11 +3,26 @@
 &lt;p&gt;Just set &lt;code&gt;?authuser=[email]&lt;/code&gt; instead of &lt;code&gt;?authuser=[arbitrary number]&lt;/code&gt;!&lt;/p&gt;
 &lt;p&gt;And yes, this also works with &lt;code&gt;/u/[email]/&lt;/code&gt; as well as &lt;code&gt;/u/[arbitrary number]!&lt;/code&gt;&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2022/09/google-tip-set-authuser-to-email"/></entry><entry><id>xenon-web-desktop-alpha2-released</id><title type="text">Xenon Web Desktop Alpha2 Released</title><updated>2010-02-01 22:17:00 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;The web desktop Xenon released version Alpha2 today. The release announcement from the website reads:&lt;/p&gt;
 &lt;p&gt;"Changes from Alpha include many security fixes (including SQL injection), the addition of the Chatroom app, Pictures app, width autoscaling, new tab launching, easier installation and various visual tweaks.&lt;/p&gt;
-&lt;p&gt;Please either use the &lt;a href="https://web.archive.org/web/20100107134808/http://xenon.kevinghadyani.com/" class="uri"&gt;https://web.archive.org/web/20100107134808/http://xenon.kevinghadyani.com/&lt;/a&gt; (edit 2021: archived), or ddownload to your server at xenon.kevinghadyani.com/xenon_alpha2.tar.bz2 (edit 2021: not archived). Please help by submitting bugs, patches, new apps, icons, etc to &lt;a href="mailto:xenon@dandart.co.uk" class="email"&gt;xenon@dandart.co.uk&lt;/a&gt;. Thank you."&lt;/p&gt;
+&lt;p&gt;Please either use the &lt;a href="https://web.archive.org/web/20100107134808/https://xenon.kevinghadyani.com/" class="uri"&gt;https://web.archive.org/web/20100107134808/https://xenon.kevinghadyani.com/&lt;/a&gt; (edit 2021: archived), or ddownload to your server at xenon.kevinghadyani.com/xenon_alpha2.tar.bz2 (edit 2021: not archived). Please help by submitting bugs, patches, new apps, icons, etc to &lt;a href="mailto:xenon@dandart.co.uk" class="email"&gt;xenon@dandart.co.uk&lt;/a&gt;. Thank you."&lt;/p&gt;
 &lt;p&gt;Xenon is a web desktop, which means that all your applications, work and settings are stored on the web. It can be run from any Internet-connected computer by browsing to the Xenon server or from your own server (in the case that you want a private instance, or want it installed into a netbook in the case where you do not have Internet connectivity). Eventually syncing support will be brought in which allows you to sync your settings and files to and from your local instance and the main server. Other features currently available include:&lt;/p&gt;
-&lt;p&gt;* Audio player (featuring HTML5 Vorbis audio) * Video player (featuring HTML5 Theora video) * Picture viewer * Email (including within Xenon and outgoing email) * Blog * Chatroom (Public, open to all on the same instance) * Notes application * Friends application for social features * My Files, to upload various types of file * Wallpaper switcher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Audio player (featuring HTML5 Vorbis audio)&lt;/li&gt;
+&lt;li&gt;Video player (featuring HTML5 Theora video)&lt;/li&gt;
+&lt;li&gt;Picture viewer&lt;/li&gt;
+&lt;li&gt;Email (including within Xenon and outgoing email)&lt;/li&gt;
+&lt;li&gt;Blog&lt;/li&gt;
+&lt;li&gt;Chatroom (Public, open to all on the same instance)&lt;/li&gt;
+&lt;li&gt;Notes application&lt;/li&gt;
+&lt;li&gt;Friends application for social features&lt;/li&gt;
+&lt;li&gt;My Files, to upload various types of file&lt;/li&gt;
+&lt;li&gt;Wallpaper switcher&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Upcoming features include:&lt;/p&gt;
-&lt;p&gt;* Settings syncing and importing * A small footprint netbook/touchbook operating system to run on * Many others&lt;/p&gt;
-&lt;p&gt;To try the system out for yourself, you can &lt;a href="https://web.archive.org/web/20100107134808/http://xenon.kevinghadyani.com/"&gt;try the demo&lt;/a&gt; (edit 2021: archived) or download the software at xenon.kevinghadyani.com/xenon_alpha2.tar.bz2 (edit 2021: not archived) to your server.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Settings syncing and importing&lt;/li&gt;
+&lt;li&gt;A small footprint netbook/touchbook operating system to run on&lt;/li&gt;
+&lt;li&gt;Many others&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To try the system out for yourself, you can &lt;a href="https://web.archive.org/web/20100107134808/https://xenon.kevinghadyani.com/"&gt;try the demo&lt;/a&gt; (edit 2021: archived) or download the software at xenon.kevinghadyani.com/xenon_alpha2.tar.bz2 (edit 2021: not archived) to your server.&lt;/p&gt;
 &lt;p&gt;Please send patches, icons, ideas, apps, et al to &lt;a href="mailto:xenon@dandart.co.uk"&gt;xenon@dandart.co.uk&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The project's website is at &lt;a href="https://web.archive.org/web/20100107134808/http://xenon.kevinghadyani.com/"&gt;http://xenon.kevinghadyani.com&lt;/a&gt; (edit 2021: archived) or a shorter version: &lt;a href="https://web.archive.org/web/20091220083328/http://hackerlanes.com/"&gt;http://hackerlanes.com&lt;/a&gt; (edit 2021: archived)&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2010/02/xenon-web-desktop-alpha2-released"/></entry></feed>
+&lt;p&gt;The project's website is at &lt;a href="https://web.archive.org/web/20100107134808/http://xenon.kevinghadyani.com/"&gt;https://xenon.kevinghadyani.com&lt;/a&gt; (edit 2021: archived) or a shorter version: &lt;a href="https://web.archive.org/web/20091220083328/http://hackerlanes.com/"&gt;https://hackerlanes.com&lt;/a&gt; (edit 2021: archived)&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2010/02/xenon-web-desktop-alpha2-released"/></entry></feed>

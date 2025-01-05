@@ -5,7 +5,7 @@
 &lt;p&gt;or:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;minicom -D /dev/ttyACM0&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;This will accept GSM modem commands prefixed with AT, and give information about the phone, and presumably allow a dialup-like interface.&lt;/p&gt;
-&lt;p&gt;Many of the &lt;a href="http://m2msupport.net/m2msupport/software-and-at-commands-for-m2m-modules/"&gt;examples on M2MSupport.net&lt;/a&gt; will work with the phone, depending on which manufacturer and capability set, presumably. With my Samsung Galaxy XCover 4, I got the GSM capability set.&lt;/p&gt;
+&lt;p&gt;Many of the &lt;a href="https://m2msupport.net/m2msupport/software-and-at-commands-for-m2m-modules/"&gt;examples on M2MSupport.net&lt;/a&gt; will work with the phone, depending on which manufacturer and capability set, presumably. With my Samsung Galaxy XCover 4, I got the GSM capability set.&lt;/p&gt;
 &lt;p&gt;Try playing around with this, but don't get charged by your provider too much for making calls you never end! Make sure you hang up properly as per the protocol.&lt;/p&gt;
 &lt;p&gt;For more on standard modem commands, see the &lt;a href="https://en.wikipedia.org/wiki/Hayes_command_set"&gt;Hayes command set article on Wikipedia&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;That's all for now!&lt;/p&gt;</content><link href="https://blog.jolharg.com/post/2018/07/issuing-modem-commands-to-unrooted"/></entry><entry><id>how-to-use-ssh-for-internet-connection</id><title type="text">How to use SSH for an Internet Connection Sharing Proxy</title><updated>2010-11-13 13:10:00 UTC</updated><author><name>Dan Dart</name></author><content type="html">&lt;p&gt;I haven't made a blog in a long while, so I'd thought I'd share this, which I recently discovered how to do.&lt;/p&gt;
