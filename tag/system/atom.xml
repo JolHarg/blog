@@ -33,7 +33,7 @@
 &lt;p&gt;Finally I'm able to have &lt;code&gt;/&lt;/code&gt; as a &lt;code&gt;tmpfs&lt;/code&gt;!&lt;/p&gt;
 &lt;p&gt;So I added the following to &lt;code&gt;hardware-configuration.nix&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="sourceCode" id="cb4"&gt;&lt;pre class="sourceCode nix"&gt;&lt;code class="sourceCode nix"&gt;&lt;span id="cb4-1"&gt;&lt;a href="#cb4-1" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;&lt;span class="op"&gt;{&lt;/span&gt;&lt;/span&gt;
-&lt;span id="cb4-2"&gt;&lt;a href="#cb4-2" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="va"&gt;fileSystems&lt;/span&gt;.&lt;span class="st"&gt;&amp;quot;&lt;/span&gt;/&lt;span class="st"&gt;&amp;quot;&lt;/span&gt; &lt;span class="op"&gt;=&lt;/span&gt;&lt;/span&gt;
+&lt;span id="cb4-2"&gt;&lt;a href="#cb4-2" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;  &lt;span class="va"&gt;fileSystems&lt;/span&gt;.&lt;span class="st"&gt;&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span class="op"&gt;=&lt;/span&gt;&lt;/span&gt;
 &lt;span id="cb4-3"&gt;&lt;a href="#cb4-3" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;    &lt;span class="op"&gt;{&lt;/span&gt;&lt;/span&gt;
 &lt;span id="cb4-4"&gt;&lt;a href="#cb4-4" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      &lt;span class="va"&gt;device&lt;/span&gt; &lt;span class="op"&gt;=&lt;/span&gt; &lt;span class="st"&gt;&amp;quot;tmpfs&amp;quot;&lt;/span&gt;&lt;span class="op"&gt;;&lt;/span&gt;&lt;/span&gt;
 &lt;span id="cb4-5"&gt;&lt;a href="#cb4-5" aria-hidden="true" tabindex="-1"&gt;&lt;/a&gt;      &lt;span class="va"&gt;fsType&lt;/span&gt; &lt;span class="op"&gt;=&lt;/span&gt; &lt;span class="st"&gt;&amp;quot;tmpfs&amp;quot;&lt;/span&gt;&lt;span class="op"&gt;;&lt;/span&gt;&lt;/span&gt;
