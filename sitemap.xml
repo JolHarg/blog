@@ -4,9 +4,19 @@
 ><loc
 >https://blog.jolharg.com</loc
 ><lastmod
->2025-11-25T17:59:19+00:00</lastmod
+>2025-12-11T01:22:05+00:00</lastmod
 ><changefreq
 >weekly</changefreq
+><priority
+>1.0</priority
+></url
+><url
+><loc
+>https://blog.jolharg.com/2025/12/sites-still-use-without-ipv6</loc
+><lastmod
+>2025-12-11T00:33:00+00:00</lastmod
+><changefreq
+>never</changefreq
 ><priority
 >1.0</priority
 ></url
@@ -454,7 +464,7 @@
 ><loc
 >https://blog.jolharg.com/tag/2025</loc
 ><lastmod
->2025-03-13T23:45:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -764,7 +774,7 @@
 ><loc
 >https://blog.jolharg.com/tag/behind</loc
 ><lastmod
->2025-03-13T23:45:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -1254,7 +1264,7 @@
 ><loc
 >https://blog.jolharg.com/tag/dns</loc
 ><lastmod
->2025-03-14T18:30:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -1814,7 +1824,7 @@
 ><loc
 >https://blog.jolharg.com/tag/ipv6</loc
 ><lastmod
->2025-03-13T23:45:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -2184,7 +2194,7 @@
 ><loc
 >https://blog.jolharg.com/tag/networking</loc
 ><lastmod
->2025-03-14T18:30:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -2704,7 +2714,7 @@
 ><loc
 >https://blog.jolharg.com/tag/sites</loc
 ><lastmod
->2025-03-13T23:45:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -2834,7 +2844,7 @@
 ><loc
 >https://blog.jolharg.com/tag/still</loc
 ><lastmod
->2025-03-13T23:45:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -2914,7 +2924,7 @@
 ><loc
 >https://blog.jolharg.com/tag/times</loc
 ><lastmod
->2025-03-13T23:45:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -3032,6 +3042,16 @@
 ></url
 ><url
 ><loc
+>https://blog.jolharg.com/tag/use</loc
+><lastmod
+>2025-12-11T00:33:00+00:00</lastmod
+><changefreq
+>weekly</changefreq
+><priority
+>2.0</priority
+></url
+><url
+><loc
 >https://blog.jolharg.com/tag/video</loc
 ><lastmod
 >2016-10-13T08:41:00+00:00</lastmod
@@ -3134,7 +3154,7 @@
 ><loc
 >https://blog.jolharg.com/tag/web</loc
 ><lastmod
->2010-09-10T10:55:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -3174,7 +3194,7 @@
 ><loc
 >https://blog.jolharg.com/tag/websites</loc
 ><lastmod
->2024-11-01T21:45:03+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
@@ -3254,7 +3274,7 @@
 ><loc
 >https://blog.jolharg.com/tag/without</loc
 ><lastmod
->2025-03-13T23:45:00+00:00</lastmod
+>2025-12-11T00:33:00+00:00</lastmod
 ><changefreq
 >weekly</changefreq
 ><priority
